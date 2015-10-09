@@ -1,10 +1,22 @@
 PODS:
-  - Expecta (1.0.0)
-  - OCHamcrest (4.1.1)
+  - Expecta (1.0.3)
+  - OCHamcrest (4.2.0)
   - OCMockito (1.4.0):
     - OCHamcrest (~> 4.0)
-  - OHHTTPStubs (4.0.2)
-  - Specta (1.0.2)
+  - OHHTTPStubs (4.3.0):
+    - OHHTTPStubs/Default (= 4.3.0)
+  - OHHTTPStubs/Core (4.3.0)
+  - OHHTTPStubs/Default (4.3.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.3.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.3.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.3.0)
+  - Specta (1.0.4)
   - Swizzlean (0.2.0)
 
 DEPENDENCIES:
@@ -15,11 +27,11 @@ DEPENDENCIES:
   - Swizzlean (~> 0.2)
 
 SPEC CHECKSUMS:
-  Expecta: 32604574add2c46a36f8d2f716b6c5736eb75024
-  OCHamcrest: 6f03ffa81d12feab872638490a44ab0a6d3aca10
+  Expecta: 9d1bff6c8b0eeee73a166a2ee898892478927a15
+  OCHamcrest: c14c0b3f4c4e99363e5b87d97bae38c4438b6d5d
   OCMockito: 4981140c9a9ec06c31af40f636e3c0f25f27e6b2
-  OHHTTPStubs: dbd1957d414659783e07b49c961940b7564c23d9
-  Specta: 9cec98310dca411f7c7ffd6943552b501622abfe
+  OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
+  Specta: 69bb134672aae190a1379ff91df07dad8dd1f869
   Swizzlean: 6ef3e5a33063b7cd99dc39f8c55164dc55d9a021
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2
