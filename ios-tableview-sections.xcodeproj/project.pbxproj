@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09DAC75489703DF665828A7D /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 301B9B688D41593FCA37887C /* LaunchScreen.xib */; };
 		1D7A3280F12235E005A5C12D /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E846210A497472A9281E21A5 /* FISAppDelegate.m */; };
 		26D2EC7CF35DD0479B61847E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94348D747DA419CA40DE9A58 /* Images.xcassets */; };
 		274E004E2F7DFB4BCC1FA128 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D796E6247B49860304DD2D1 /* libPods-unit_tests.a */; };
+		4D55491F1BC8701D001E3D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D55491E1BC8701D001E3D77 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		6191FE33C8C724323AD8B38F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330A711D06806FFFDF20B7AD /* Foundation.framework */; };
 		E245C2A81B1CF76F00438E2D /* FISTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E245C2A71B1CF76F00438E2D /* FISTableViewControllerSpec.m */; };
 		E2F260E31B17A41500949FCA /* FISTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F260E21B17A41500949FCA /* FISTableViewController.m */; };
@@ -31,11 +31,11 @@
 /* Begin PBXFileReference section */
 		0986E7B31B52C791967D2B33 /* ios-tableview-sections-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ios-tableview-sections-Info.plist"; sourceTree = "<group>"; };
 		0D796E6247B49860304DD2D1 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		301B9B688D41593FCA37887C /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		330A711D06806FFFDF20B7AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		34C7D1FFF0B2D7AD2ECCD401 /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		38B67595B8C3FEC2B46F1ED7 /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
 		41A640C89E3C4B09F2173B29 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D55491E1BC8701D001E3D77 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 		580773BEC9DC3EC5F1A56772 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		94348D747DA419CA40DE9A58 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC68BF55EAEDB623464BDDBF /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 		3D5FD3E164430F289CEDA9F2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4D55491E1BC8701D001E3D77 /* Launch Screen.storyboard */,
 				94348D747DA419CA40DE9A58 /* Images.xcassets */,
-				301B9B688D41593FCA37887C /* LaunchScreen.xib */,
 				2E4374ABDB2B731A4663F61F /* Other-Sources */,
 			);
 			path = Resources;
@@ -161,9 +161,9 @@
 			children = (
 				F224206993A181C101511740 /* FISAppDelegate.h */,
 				E846210A497472A9281E21A5 /* FISAppDelegate.m */,
+				E2F260E41B17A46100949FCA /* Main.storyboard */,
 				E2F260E11B17A41500949FCA /* FISTableViewController.h */,
 				E2F260E21B17A41500949FCA /* FISTableViewController.m */,
-				E2F260E41B17A46100949FCA /* Main.storyboard */,
 				3D5FD3E164430F289CEDA9F2 /* Resources */,
 			);
 			path = "ios-tableview-sections";
@@ -251,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D55491F1BC8701D001E3D77 /* Launch Screen.storyboard in Resources */,
 				26D2EC7CF35DD0479B61847E /* Images.xcassets in Resources */,
 				E2F260E51B17A46100949FCA /* Main.storyboard in Resources */,
 			);
@@ -305,7 +306,6 @@
 			files = (
 				E2F260E31B17A41500949FCA /* FISTableViewController.m in Sources */,
 				1D7A3280F12235E005A5C12D /* FISAppDelegate.m in Sources */,
-				09DAC75489703DF665828A7D /* LaunchScreen.xib in Sources */,
 				FE9C4F2FAFB524BA8C24F4F3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
