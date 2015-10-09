@@ -1,5 +1,6 @@
-#Custom Objects In TableViews
-###Goals
+# Tableview Sections
+
+## Goals
    * Recognize UITableView as a display pattern and learn more about customizing it.
    * Learn how to implement sections (with headers) in a table view.
    * Stimulate thinking about how custom objects can be displayed using a tableview.
