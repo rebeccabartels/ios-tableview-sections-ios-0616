@@ -32,3 +32,5 @@ Add the following properties to your `FISStudent`:
 Set these for your student objects in your `viewDidLoad`. Now instead of using `favoriteThings` in your tableView data source, have it use these new properties to fill in the rows.
 
 Then if you wanna make it real fancy, include the property name in the cell (eg "Food: Pizza" as opposed to "Pizza")
+
+<a href='https://learn.co/lessons/ios-tableview-sections' data-visibility='hidden'>View this lesson on Learn.co</a>
