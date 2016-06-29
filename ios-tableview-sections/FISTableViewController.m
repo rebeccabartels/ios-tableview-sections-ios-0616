@@ -7,6 +7,7 @@
 //
 
 #import "FISTableViewController.h"
+#import "FISStudent.h"
 
 @interface FISTableViewController ()
 
@@ -14,34 +15,76 @@
 
 @implementation FISTableViewController
 
-- (void)viewDidLoad {
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+
+    FISStudent *charlemagne  = [[FISStudent alloc] init];
+    FISStudent *irene = [[FISStudent alloc] init];
+    FISStudent *theodora = [[FISStudent alloc] init];
+    FISStudent *vlad = [[FISStudent alloc] init];
     
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    charlemagne.name = @"Charlemagne";
+    irene.name = @"Irene";
+    theodora.name = @"Theodora";
+    vlad.name = @"Vlad";
     
-    // Configure the cell...
+    charlemagne.favoriteThings = @[@"Subordinating Europe and the Papacy", @"Raising large armies", @"The Franks"];
+    irene.favoriteThings = @[@"Blinding her enemies", @"The Byzantine Crown", @"Being the Queen of Byzantium"];
+    theodora.favoriteThings = @[@"Justinian", @"Wine", @"Hagia Sophia"];
+    vlad.favoriteThings = @[@"Noses", @"Impaling his enemies", @"House of Dracul"];
+    
+    self.students = @[charlemagne, irene, theodora, vlad];
+    
+    
+    NSLog(@"The students are: Charlemagne, Theodora, Irene, Vlad");
+    NSLog(@"%@'s favorite things are:%@", charlemagne.name, charlemagne.favoriteThings);
+    NSLog(@"%@'s favorite things are:%@", irene.name, irene.favoriteThings);
+    NSLog(@"%@'s favorite things are:%@", theodora.name, theodora.favoriteThings);
+    NSLog(@"%@'s favorite things are:%@", vlad.name, vlad.favoriteThings);
+}
+
+
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+   return (NSInteger)self.students.count;
+
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    FISStudent *currentStudent = self.students[(NSUInteger)section];
+    return (NSInteger)currentStudent.favoriteThings.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"expandingCell" forIndexPath:indexPath];
+FISStudent *currentStudent = self.students[(NSUInteger)indexPath.section];
+    
+    NSString *thisFavoriteThing = currentStudent.favoriteThings[(NSUInteger)indexPath.row];
+    cell.textLabel.text = thisFavoriteThing;
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"%ld", indexPath.row + 1];
     
     return cell;
 }
-*/
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return ((FISStudent*) self.students[(NSUInteger)section]).name;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 2;
+}
+
 
 /*
 // Override to support conditional editing of the table view.
